@@ -2,11 +2,12 @@
 <head>
   <title>conrad booker</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body>
   <h1>conrad booker</h1>
-  
-  <table>
+
+  <!-- <table>
     <tr>
       <td>
         <label for="cars">Choose a year:</label>
@@ -34,33 +35,33 @@
         </svg>
       </td>
 </tr>
-</table>
-  <div>
+</table> -->
+  <!-- <div>
   Things to notice:
     <ul>
       <li>Javascript can interact in a similar way with both SVG and HTML</li>
       <li>Important individual SVG elements are given an id</li>
       <li>The onchange event listener can be added to any element</li>
     </ul>
-  </div>
+  </div> -->
 <script>
-  function changeData() {
-    console.log("onChange works!")
-    let year = document.getElementById("year_select").value
-    console.log(year)
-    data={
-     "2020": [120, 120],
-     "2021": [110, 130],
-     "2022": [100, 140],
-     "2023": [90, 150]
-   }
-   let newData = data[year];
-   document.getElementById("bar1").setAttribute("height", newData[0])
-   document.getElementById("bar1").setAttribute("y", 180-newData[0])
-   document.getElementById("bar2").setAttribute("height", newData[1])
-   document.getElementById("bar2").setAttribute("y", 180-newData[1])
+  // function changeData() {
+  //   console.log("onChange works!")
+  //   let year = document.getElementById("year_select").value
+  //   console.log(year)
+  //   data={
+  //    "2020": [120, 120],
+  //    "2021": [110, 130],
+  //    "2022": [100, 140],
+  //    "2023": [90, 150]
+  //  }
+  //  let newData = data[year];
+  //  document.getElementById("bar1").setAttribute("height", newData[0])
+  //  document.getElementById("bar1").setAttribute("y", 180-newData[0])
+  //  document.getElementById("bar2").setAttribute("height", newData[1])
+  //  document.getElementById("bar2").setAttribute("y", 180-newData[1])
 
-  }
+  // }
   //insert code from tutorial here
 </script>
 </body>
