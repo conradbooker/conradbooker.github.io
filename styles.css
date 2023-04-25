@@ -21,3 +21,12 @@
     fill: #ec008c;
     opacity: 1;
 }
+body {
+  font-family: 'SF-Pro-Medium';
+}  
+
+@font-face {
+  font-family: 'SF-Pro-Medium';
+  src: url('assets/SF-Pro.ttf') format('truetype');
+  font-style: medium;
+}

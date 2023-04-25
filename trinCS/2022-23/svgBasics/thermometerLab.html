@@ -68,25 +68,19 @@
         <rect x="79" y="50" width="7" height="3" stroke="none"/>
         <rect x="79" y="40" width="13" height="3" stroke="none"/>
       </g>
-      <g id="tickMarks">
-        <rect x="79" y="140" width="13" height="3" stroke="none"/>
-        <rect x="79" y="130" width="7" height="3" stroke="none"/>
-        <rect x="79" y="120" width="13" height="3" stroke="none"/>
-        <rect x="79" y="110" width="7" height="3" stroke="none"/>
-        <rect x="79" y="100" width="13" height="3" stroke="none"/>
-        <rect x="79" y="90" width="7" height="3" stroke="none"/>
-        <rect x="79" y="80" width="13" height="3" stroke="none"/>
-        <rect x="79" y="70" width="7" height="3" stroke="none"/>
-        <rect x="79" y="60" width="13" height="3" stroke="none"/>
-        <rect x="79" y="50" width="7" height="3" stroke="none"/>
-        <rect x="79" y="40" width="13" height="3" stroke="none"/>
+      <g id="texts">
+        <text id="1" x="95" y="145">0</text>
+        <text id="2" x="95" y="125">40</text>
+        <text id="3" x="95" y="105">80</text>
+        <text id="4" x="95" y="85">120</text>
+        <text id="5" x="95" y="65">160</text>
+        <text id="6" x="95" y="45">200</text>
       </g>
 
-      <text x="95" y="145">0</text>
 
 
       <path id="reflection" d="M 67 199 A 20 20 68 0 1 42 171" />
-      <path id="reflection" d=" M 46 166 A 20 20 42 0 1 58 160" />
+      <path id="reflection" d="M 46 166 A 20 20 42 0 1 58 160" />
 
       
 
@@ -99,13 +93,29 @@
       let unitBool = document.getElementById("f").checked
       let unit = "F"
       if(unitBool) {
-          unit = "F"
-          temperature = (tempSliderVal/156)*212
-          document.getElementById("temp").innerHTML = "Temerature: " + String(Math.round(temperature) + "º" + unit)
+        unit = "F"
+        temperature = (tempSliderVal/156)*212
+        document.getElementById("temp").innerHTML = "Temerature: " + String(Math.round(temperature) + "º" + unit)
+
+        document.getElementById("1").innerHTML = 0
+        document.getElementById("2").innerHTML = 40
+        document.getElementById("3").innerHTML = 80
+        document.getElementById("4").innerHTML = 120
+        document.getElementById("5").innerHTML = 160
+        document.getElementById("6").innerHTML = 200
+
       } else {
-          unit = "C"
-          temperature = ((((tempSliderVal/156)*212)-32)*5)/9
-          document.getElementById("temp").innerHTML = "Temerature: " + String(Math.round(temperature) + "º" + unit)
+        unit = "C"
+        temperature = ((((tempSliderVal/156)*212)-32)*5)/9
+        document.getElementById("temp").innerHTML = "Temerature: " + String(Math.round(temperature) + "º" + unit)
+
+        document.getElementById("1").innerHTML = 0
+        document.getElementById("2").innerHTML = 30
+        document.getElementById("3").innerHTML = 45
+        document.getElementById("4").innerHTML = 60
+        document.getElementById("5").innerHTML = 75
+        document.getElementById("6").innerHTML = 90
+
       }
     }
     function changeColor() {
