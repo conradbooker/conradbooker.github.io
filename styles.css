@@ -1,29 +1,151 @@
-.axis {
-  stroke: #333333;
-  stroke-width: 3;
-}
-.grid {
-  stroke: #dddddd;
-  stroke-width: 1;
-  opacity: .25;
-}
-.label {
-  cursor: default;
-  text-anchor: middle;
-  font-size: 14px;
-  fill: #444444
-}
-.bar {
-  fill: #a9a9a9;
-  opacity: 0.6;
-}
-.bar:hover {
-    fill: #ec008c;
-    opacity: 1;
-}
+
 body {
   font-family: 'SF-Pro-Medium';
-}  
+  margin: 0;
+}
+
+
+
+.navbar {
+  padding-top: 20px;
+  display: grid;
+}
+/* subway line */
+.line {
+  grid-area: 1 / 1;
+  height: 30px;
+  background-color: #274581;
+  overflow: hidden;
+}
+.secondLine {
+  position:relative;
+  top:3.5px;
+  grid-area: 1 / 1;
+  height: 23px;
+  background-color: #397DFF;
+  overflow: hidden;
+}
+/* home */
+.roundedRectangle {
+  position:absolute;
+  top:14px;
+  left:20px;
+
+  border-radius: 12px;
+  border: 3.5px solid #274581;
+
+  width: 180px;
+  height: 35px;
+
+  background-color: #397DFF;
+  transition: box-shadow .1s;
+}
+.mainText {
+  position:absolute;
+  top:18px;
+  left: 35px;
+  color: #ffffff;
+  text-align: left;
+  text-decoration: none;
+  font-size: 25px;
+  
+  user-select: none;
+  -webkit-user-select: none; /* for safari */
+}
+.home:hover .roundedRectangle {
+  box-shadow: 0 0 11px #000000;
+}
+
+
+.first {
+  position:absolute;
+  top:6.5px;
+  left:500px;
+}
+.second {
+  position:absolute;
+  top:6.5px;
+  left:650px;
+}
+.third {
+  position:absolute;
+  top:6.5px;
+  left:800px;
+}
+.station-type1 {
+  position:absolute;
+  top:7px;
+  left:7.5px;
+
+  border-radius: 100px;
+  border: 3.5px solid #274581;
+
+  width: 35px;
+  height: 35px;
+
+  background-color: #397DFF;
+  transition: box-shadow .1s;
+}
+.station-type1-fill {
+  position:absolute;
+  top:14;
+  left:14.5px;
+
+  border-radius: 100px;
+
+  width: 28px;
+  height: 28px;
+
+  background-color: #ffffff;
+  transition: box-shadow .1s;
+}
+
+.station-type2 {
+  position:absolute;
+  top:7px;
+  left:7.5px;
+
+  border-radius: 100px;
+  border: 3.5px solid #ffffff;
+
+  width: 35px;
+  height: 35px;
+
+  background-color: #ffffff;
+  transition: box-shadow .1s;
+}
+.station-type2-fill {
+  position:absolute;
+  top:11.5;
+  left:12px;
+
+  border-radius: 100px;
+  border: 3.5px solid #274581;
+
+  width: 26px;
+  height: 26px;
+
+  background-color: #397DFF;
+  transition: box-shadow .1s;
+}
+
+.text {
+  position:absolute;
+  top:53px;
+  color: #000000;
+  text-align: justify;
+  text-decoration: none;
+  font-size: 20px;
+}
+.first:hover .station-type1 {
+  box-shadow: 0 0 11px #000000;
+}
+.second:hover .station-type2 {
+  box-shadow: 0 0 11px #000000;
+}
+.third:hover .station-type2 {
+  box-shadow: 0 0 11px #000000;
+}
 
 @font-face {
   font-family: 'SF-Pro-Medium';
