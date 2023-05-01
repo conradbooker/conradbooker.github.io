@@ -137,7 +137,7 @@ body {
   text-decoration: none;
   font-size: 20px;
 }
-.first:hover .station-type1 {
+.first:hover .station-type2 {
   box-shadow: 0 0 11px #000000;
 }
 .second:hover .station-type2 {
