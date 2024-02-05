@@ -1,35 +1,88 @@
 
 body {
-  font-family: 'SF-Pro-Medium';
+  font-family: system-ui;
   margin: 0;
 }
 
-
+:root {
+  --margin: 40px;
+}
+.everything {
+  position: relative;
+}
+.content > div {
+  position: absolute;
+}
 
 .navbar {
-  padding-top: 20px;
+  padding-top: var(--margin);
   display: grid;
 }
 /* subway line */
-.line {
-  grid-area: 1 / 1;
+.line-horizontal {
+  margin-left: calc(var(--margin) + 126px);
+  grid-area: 1/1;
   height: 30px;
   background-color: #274581;
   overflow: hidden;
 }
+.line-vertical {
+  margin-left: var(--margin);
+  margin-top: -500px;
+  width: 30px;
+  height: 3000px;
+  background-color: #274581;
+  overflow: hidden;
+}
+.first-quarter {
+  position: absolute;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  border: 30px solid #274581;
+  border-top-left-radius: 127px;
+  border-right: 10px;
+  border-bottom: 10px;
+  margin-left: var(--margin);
+}
+.second-quarter {
+  position: absolute;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  border: 23px solid #397DFF;
+  border-top-left-radius: 1000px;
+  border-right: 10px;
+  border-bottom: 10px;
+  margin-top: 3.5px;
+  margin-left: calc(var(--margin) + 3.5px);
+}
 .secondLine {
-  position:relative;
-  top:3.5px;
+  margin-left: calc(var(--margin) + 126px);
+  position: relative;
+  top: 3.5px;
   grid-area: 1 / 1;
   height: 23px;
   background-color: #397DFF;
   overflow: hidden;
 }
+.secondLine-vertical {
+  margin-left: calc(var(--margin) + 3.5px);
+  margin-top: -50px;
+  width: 23px;
+  position: absolute;
+  top: 3.5px;
+  grid-area: 1 / 1;
+  height: 10000px;
+  background-color: #397DFF;
+  overflow: hidden;
+}
+
 /* home */
 .roundedRectangle {
   position:absolute;
-  top:14px;
-  left:20px;
+  top: calc(var(--margin) - 6px);
+  left: calc(var(--margin) + 160px);
 
   border-radius: 12px;
   border: 3.5px solid #274581;
@@ -40,10 +93,11 @@ body {
   background-color: #397DFF;
   transition: box-shadow .1s;
 }
+
 .mainText {
   position:absolute;
-  top:18px;
-  left: 35px;
+  top: calc(var(--margin) - 2px);
+  left: calc(var(--margin) + 175px);
   color: #ffffff;
   text-align: left;
   text-decoration: none;
@@ -59,19 +113,15 @@ body {
 
 .first {
   position:absolute;
-  top:6.5px;
+  top:26.5px;
   left:500px;
 }
 .second {
   position:absolute;
-  top:6.5px;
+  top:26.5px;
   left:650px;
 }
-.third {
-  position:absolute;
-  top:6.5px;
-  left:800px;
-}
+
 .station-type1 {
   position:absolute;
   top:7px;
@@ -129,13 +179,24 @@ body {
   transition: box-shadow .1s;
 }
 
-.text {
+.text-projects {
   position:absolute;
-  top:53px;
+  top:54px;
+  left: -5px;
   color: #000000;
   text-align: justify;
   text-decoration: none;
   font-size: 20px;
+  text-align: center;
+}
+.about-projects {
+  position: absolute;
+  top: 54px;
+  color: #000000;
+  text-align: justify;
+  text-decoration: none;
+  font-size: 20px;
+  text-align: center;
 }
 .first:hover .station-type2 {
   box-shadow: 0 0 11px #000000;
