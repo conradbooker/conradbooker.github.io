@@ -273,6 +273,50 @@ a:hover {
   border-radius:15px;
 }
 
+.project-container {
+  position: relative;
+  width: 250px;
+  height: 150px;
+  float: left;
+  margin-left: 15px;
+}
+
+.project-image {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius:10px;
+  opacity: 30%;
+}
+
+.projects {
+  margin-left: -15px;
+}
+
+.centered-top {
+  z-index: 100;
+  position: absolute;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.centered-bottom {
+  z-index: 100;
+  position: absolute;
+  color: white;
+  font-size: 18px;
+  top: 48%;
+  left: 50%;
+  width: 90%;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+
 @font-face {
   font-family: 'SF-Pro-Medium';
   src: url('assets/SF-Pro.ttf') format('truetype');
