@@ -2,6 +2,7 @@
 body {
   font-family: system-ui;
   margin: 0;
+  background-color: #282829;
 }
 
 :root {
@@ -10,8 +11,11 @@ body {
 .everything {
   position: relative;
 }
-.content > div {
-  position: absolute;
+.content {
+  position: relative;
+  margin-left: calc(var(--margin) * 3);
+  margin-top: -2350px;
+  top: -var(--margin);
 }
 
 .navbar {
@@ -20,10 +24,11 @@ body {
 }
 /* subway line */
 .line-horizontal {
+  position: relative;
   margin-left: calc(var(--margin) + 126px);
   grid-area: 1/1;
   height: 30px;
-  background-color: #274581;
+  background-color: #397DFF;
   overflow: hidden;
 }
 .line-vertical {
@@ -31,7 +36,7 @@ body {
   margin-top: -500px;
   width: 30px;
   height: 3000px;
-  background-color: #274581;
+  background-color: #397DFF;
   overflow: hidden;
 }
 .first-quarter {
@@ -39,13 +44,13 @@ body {
   overflow: hidden;
   width: 100px;
   height: 100px;
-  border: 30px solid #274581;
+  border: 30px solid #397DFF;
   border-top-left-radius: 127px;
   border-right: 10px;
   border-bottom: 10px;
   margin-left: var(--margin);
 }
-.second-quarter {
+/* .second-quarter {
   position: absolute;
   overflow: hidden;
   width: 100px;
@@ -68,26 +73,41 @@ body {
 }
 .secondLine-vertical {
   margin-left: calc(var(--margin) + 3.5px);
-  margin-top: -50px;
+  margin-top: -500px;
   width: 23px;
   position: absolute;
   top: 3.5px;
   grid-area: 1 / 1;
-  height: 10000px;
+  height: 3000px;
   background-color: #397DFF;
   overflow: hidden;
+} */
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: #bcbcbc;
+}
+
+.banner-img {
+  width: 450px;
+  height: 250px;
+  object-fit: cover;
+  border-radius:15px;
 }
 
 /* home */
 .roundedRectangle {
   position:absolute;
   top: calc(var(--margin) - 6px);
-  left: calc(var(--margin) + 160px);
+  left: calc(var(--margin) + 130px);
 
   border-radius: 12px;
-  border: 3.5px solid #274581;
+  border: 3.5px solid #282829;
 
-  width: 180px;
+  width: 185px;
   height: 35px;
 
   background-color: #397DFF;
@@ -96,8 +116,8 @@ body {
 
 .mainText {
   position:absolute;
-  top: calc(var(--margin) - 2px);
-  left: calc(var(--margin) + 175px);
+  top: calc(var(--margin));
+  left: calc(var(--margin) + 145px);
   color: #ffffff;
   text-align: left;
   text-decoration: none;
@@ -107,24 +127,29 @@ body {
   -webkit-user-select: none; /* for safari */
 }
 .home:hover .roundedRectangle {
-  box-shadow: 0 0 11px #000000;
+  box-shadow: 0 0 11px #282829;
 }
 
 
 .first {
-  position:absolute;
-  top:26.5px;
-  left:500px;
+  position: absolute;
+  top: 25.7px;
+  right: 450px;
 }
 .second {
-  position:absolute;
-  top:26.5px;
-  left:650px;
+  position: absolute;
+  top: 25.7px;
+  right: 300px;
+}
+.third {
+  position: absolute;
+  top: 25.7px;
+  right: 150px;
 }
 
 .station-type1 {
   position:absolute;
-  top:7px;
+  top:10px;
   left:7.5px;
 
   border-radius: 100px;
@@ -152,60 +177,100 @@ body {
 
 .station-type2 {
   position:absolute;
-  top:7px;
-  left:7.5px;
+  top:9.5px;
+  left: 7.5px;
 
   border-radius: 100px;
-  border: 3.5px solid #ffffff;
+  border: 5px solid #282829;
 
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
 
   background-color: #ffffff;
   transition: box-shadow .1s;
 }
-.station-type2-fill {
-  position:absolute;
-  top:11.5;
-  left:12px;
 
-  border-radius: 100px;
-  border: 3.5px solid #274581;
-
-  width: 26px;
-  height: 26px;
-
-  background-color: #397DFF;
-  transition: box-shadow .1s;
-}
-
-.text-projects {
-  position:absolute;
-  top:54px;
-  left: -5px;
-  color: #000000;
-  text-align: justify;
-  text-decoration: none;
-  font-size: 20px;
-  text-align: center;
-}
-.about-projects {
+.bottom-station-text {
   position: absolute;
   top: 54px;
-  color: #000000;
-  text-align: justify;
+  left: 50%;
+  left: 30px;
+  transform: translateX(-50%);
+  color: #ffffff;
+  text-align: center;
   text-decoration: none;
   font-size: 20px;
-  text-align: center;
 }
 .first:hover .station-type2 {
-  box-shadow: 0 0 11px #000000;
+  box-shadow: 0 0 11px #282829;
 }
 .second:hover .station-type2 {
-  box-shadow: 0 0 11px #000000;
+  box-shadow: 0 0 11px #282829;
 }
 .third:hover .station-type2 {
-  box-shadow: 0 0 11px #000000;
+  box-shadow: 0 0 11px #282820;
+}
+
+.first-vertical:hover .station-type2 {
+  box-shadow: 0 0 11px #282820;
+}
+
+.text {
+  color: #ffffff;
+}
+
+.h1 {
+  font-size: 60px;
+}
+
+.h2 {
+  font-size: 40px;
+}
+
+.paragraph {
+  font-size: 20px;
+  margin-top: 10px;
+  letter-spacing: 0.2;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.hstack {
+  position: relative;
+  display: inline;
+}
+
+.flex-container {
+  display: flex;
+  margin-left: -15px;
+}
+
+.first-vertical {
+  position: absolute;
+  left: -92.5px;
+  top: 6px;
+}
+.second-vertical {
+  position: absolute;
+  left: -92.5px;
+  top: -4px;
+}
+
+.element-right {
+  position: absolute;
+  left: 0px; /* Adjust this value as needed to position the right element correctly */
+}
+
+
+.skill-image {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  float:left;
+  margin-left: 15px;
+  border-radius:15px;
 }
 
 @font-face {
